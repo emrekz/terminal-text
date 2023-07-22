@@ -10,4 +10,4 @@ Default character limit 20 and changeable.
 # gcc -o run .\TerminalText\terminal.c
 ```
 ## Output
-![](capture.png)
+![](./capture.PNG)
