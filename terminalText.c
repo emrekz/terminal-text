@@ -63,5 +63,6 @@ void printCharPattern(uint8_t *getCharOrder, uint8_t userWordSize){
       }
       printf("\n");
     }
+    printf("\n");
   }
 }
