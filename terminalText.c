@@ -64,7 +64,7 @@ void printCharPattern(uint8_t *getCharOrder, uint8_t userWordSize){
         for(int8_t i=7;i>=0;i--){
           printf("%c", x[t][n][i]);
         }
-        printf(" ");
+        printf("  ");
       }
       printf("\n");
     }

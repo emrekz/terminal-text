@@ -6,7 +6,7 @@
 #include <stdint.h>
 
 #define CHARACTER_LIMIT 20
-#define PATTERN_CHAR '|'
+#define PATTERN_CHAR '#'
 #define zero 0x00
 #define hor7b 0xFE
 #define hor8b 0xFF
