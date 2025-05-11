@@ -20,7 +20,6 @@ int main() {
     printf("Character limit size: %d\nUse '-' character for space (Ex:hello-world)\nLET'S TYPE SOMETHING ! : ", CHARACTER_LIMIT);
     scanf("%s", userWord);
     userWordSize = (uint8_t)strlen(userWord);
-    printf("%d\n", userWordSize);
     uint8_t *getCharOrder = checkWordChars(userWord, userWordSize);
     printCharPattern(getCharOrder, userWordSize);
     charCount = 0;

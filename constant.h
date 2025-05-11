@@ -17,6 +17,7 @@
 #define cen2b 0x18
 #define hor2bL2bR 0xCC
 #define hor4bL 0xF0
+#define hor5bL 0xF8
 #define hor4bR 0x0F
 #define sym3b 0xE7
 #define sym2b2b2b 0xDB
@@ -61,7 +62,7 @@ uint16_t charArr[38][8] = {
   {hor8b,hor2bR,z0,cen2b,z1,hor2bL,hor2bL,hor8b},               //  Z 
   {zero,zero,zero,zero,zero,zero,zero,zero},
   {hor8b,sym2b,sym2b,sym2b,sym2b,sym2b,sym2b,hor8b},            //  0
-  {cen2b,cen2b,cen2b,cen2b,cen2b,cen2b,cen2b,cen2b},            //  1
+  {hor5bL,cen2b,cen2b,cen2b,cen2b,cen2b,cen2b,hor8b},           //  1
   {hor8b,hor2bR,hor2bR,hor8b,hor2bL,hor2bL,hor2bL,hor8b},       //  2
   {hor8b,hor2bR,hor2bR,hor8b,hor2bR,hor2bR,hor2bR,hor8b},       //  3
   {sym2b,sym2b,sym2b,hor8b,hor2bR,hor2bR,hor2bR,hor2bR},        //  4
