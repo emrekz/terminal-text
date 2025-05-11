@@ -71,5 +71,4 @@ uint16_t charArr[38][8] = {
   {hor8b,hor2bR,hor2bR,hor2bR,hor2bR,hor2bR,hor2bR,hor2bR},     //  7
   {hor8b,sym2b,sym2b,hor8b,sym2b,sym2b,sym2b,hor8b},            //  8
   {hor8b,sym2b,sym2b,hor8b,hor2bR,hor2bR,hor2bR,hor8b},         //  9
-
 };
