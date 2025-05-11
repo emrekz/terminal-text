@@ -15,10 +15,12 @@ void printCharPattern(uint8_t *getCharOrder, uint8_t userWordSize);
 
 int main() {
   uint8_t userWordSize = sizeof(userWord)/sizeof(userWord[0]);
-  printf("Character limit size: %d\nUse '-' character for space (Ex:hello-world)\nLET'S TYPE SOMETHING ! : ", userWordSize);
-  scanf("%s", userWord);
-  uint8_t *getCharOrder = checkWordChars(userWord, userWordSize);
-  printCharPattern(getCharOrder, userWordSize);
+  while(userWord[0] != '0' && userWordSize != 1) {
+    printf("Character limit size: %d\nUse '-' character for space (Ex:hello-world)\nLET'S TYPE SOMETHING ! : ", userWordSize);
+    scanf("%s", userWord);
+    uint8_t *getCharOrder = checkWordChars(userWord, userWordSize);
+    printCharPattern(getCharOrder, userWordSize);
+  }
   return 0;
 }
 
