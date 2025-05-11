@@ -32,7 +32,7 @@
 #define z0 0x06
 #define z1 0x60
 
-uint16_t charArr[27][8] = {
+uint16_t charArr[38][8] = {
   {hor8b,sym2b,sym2b,hor8b,sym2b,sym2b,sym2b,sym2b},            //  A    
   {hor7b,sym2b,sym2b,hor7b,sym2b,sym2b,sym2b,hor7b},            //  B
   {hor8b,hor2bL,hor2bL,hor2bL,hor2bL,hor2bL,hor2bL,hor8b},      //  C
@@ -59,5 +59,16 @@ uint16_t charArr[27][8] = {
   {sym2b,sym2b,sym2b2b,cen2b,sym2b2b,sym2b,sym2b,sym2b},        //  X
   {sym2b,sym2b,sym2b2b,cen2b,cen2b,cen2b,cen2b,cen2b},          //  Y
   {hor8b,hor2bR,z0,cen2b,z1,hor2bL,hor2bL,hor8b},               //  Z 
-  {zero,zero,zero,zero,zero,zero,zero,zero}
+  {zero,zero,zero,zero,zero,zero,zero,zero},
+  {hor8b,sym2b,sym2b,sym2b,sym2b,sym2b,sym2b,hor8b},            //  0
+  {cen2b,cen2b,cen2b,cen2b,cen2b,cen2b,cen2b,cen2b},            //  1
+  {hor8b,hor2bR,hor2bR,hor8b,hor2bL,hor2bL,hor2bL,hor8b},       //  2
+  {hor8b,hor2bR,hor2bR,hor8b,hor2bR,hor2bR,hor2bR,hor8b},       //  3
+  {sym2b,sym2b,sym2b,hor8b,hor2bR,hor2bR,hor2bR,hor2bR},        //  4
+  {hor8b,hor2bL,hor2bL,hor8b,hor2bR,hor2bR,hor2bR,hor8b},       //  5
+  {hor8b,hor2bL,hor2bL,hor8b,sym2b,sym2b,sym2b,hor8b},          //  6
+  {hor8b,hor2bR,hor2bR,hor2bR,hor2bR,hor2bR,hor2bR,hor2bR},     //  7
+  {hor8b,sym2b,sym2b,hor8b,sym2b,sym2b,sym2b,hor8b},            //  8
+  {hor8b,sym2b,sym2b,hor8b,hor2bR,hor2bR,hor2bR,hor8b},         //  9
+
 };

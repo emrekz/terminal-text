@@ -5,7 +5,7 @@
 #include "constant.h"
 
 uint8_t userWord[CHARACTER_LIMIT];
-char alphabet[27] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','-'};
+char alphabet[38] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','-', '0','1','2','3','4','5','6','7','8','9'};
 uint8_t charOrder[CHARACTER_LIMIT];
 uint8_t charPatternStorage[CHARACTER_LIMIT][8][8];
 uint8_t charCount = 0;
@@ -26,14 +26,14 @@ int main() {
 
 char *checkWordChars(uint8_t *userWord, uint8_t userWordSize) {
   for(uint8_t i=0;i<userWordSize;i++){
-    for(uint8_t n=0;n<27;n++){
-      if(isalpha(*(userWord+i))){
+    for(uint8_t n=0;n<38;n++){
+      if(isalnum(*(userWord+i))){
         if(toupper(*(userWord+i))==alphabet[n]){
           charOrder[i] = n;
           charCount++;
           break;
         } 
-      } 
+      }
       else if(*(userWord+i) == '-') {
         charOrder[i] = 26;
         charCount++;
