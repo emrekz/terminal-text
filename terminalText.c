@@ -2,10 +2,11 @@
 #include <stdint.h>
 #include <math.h>
 #include <ctype.h>
+#include <string.h>
 #include "constant.h"
 
 uint8_t userWord[CHARACTER_LIMIT];
-char alphabet[38] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','-', '0','1','2','3','4','5','6','7','8','9'};
+char alphabet[38] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','-','0','1','2','3','4','5','6','7','8','9'};
 uint8_t charOrder[CHARACTER_LIMIT];
 uint8_t charPatternStorage[CHARACTER_LIMIT][8][8];
 uint8_t charCount = 0;
@@ -14,12 +15,15 @@ char *checkWordChars(uint8_t *userWord, uint8_t userWordSize);
 void printCharPattern(uint8_t *getCharOrder, uint8_t userWordSize);
 
 int main() {
-  uint8_t userWordSize = sizeof(userWord)/sizeof(userWord[0]);
-  while(userWord[0] != '0' && userWordSize != 1) {
-    printf("Character limit size: %d\nUse '-' character for space (Ex:hello-world)\nLET'S TYPE SOMETHING ! : ", userWordSize);
+  uint8_t userWordSize;
+  while(1) {
+    printf("Character limit size: %d\nUse '-' character for space (Ex:hello-world)\nLET'S TYPE SOMETHING ! : ", CHARACTER_LIMIT);
     scanf("%s", userWord);
+    userWordSize = (uint8_t)strlen(userWord);
+    printf("%d\n", userWordSize);
     uint8_t *getCharOrder = checkWordChars(userWord, userWordSize);
     printCharPattern(getCharOrder, userWordSize);
+    charCount = 0;
   }
   return 0;
 }
